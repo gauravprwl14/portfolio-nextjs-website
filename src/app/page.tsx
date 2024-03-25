@@ -3,7 +3,7 @@ import Home from "./home";
 
 export default function MainPage() {
   return (
-    <main className="flex flex-col min-h-screen right-0 left-0 mt-19">
+    <main className="flex flex-col min-h-screen right-0 left-0 mt-20">
       <Home></Home>
     </main>
   );

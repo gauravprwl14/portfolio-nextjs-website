@@ -29,7 +29,8 @@ const Header = ({ logo }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <header>
-      <nav className="px-8 py-6 bg-white fixed top-0 left-0 right-0 z-30">
+      {/* bg-white */}
+      <nav className="px-8 py-6  fixed top-0 left-0 right-0 z-30">
         {/* container */}
         <div className="w-full mx-auto h-auto py-0 px-10 relative clear-both max-w-screen-2xl">
           <div className="flex items-center justify-between">
