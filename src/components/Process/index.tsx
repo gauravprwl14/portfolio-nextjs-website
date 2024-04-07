@@ -4,8 +4,8 @@ export const ProcessContent = () => {
   return (
     <div className="process-section h-auto w-full float-left clear-both mx-auto px-4 lg:px-10">
       {/*  py-20 */}
-      <div className="w-full h-auto max-w-screen-2xl py-20">
-        <div className="flex flex-1 justify-evenly text-center flex-col lg:flex-row">
+      <div className="w-full h-auto mx-auto max-w-screen-2xl mt-10 lg:mt-20">
+        <div className="flex w-full flex-1 justify-evenly text-center flex-col lg:flex-row">
           {PROCESS_OBJECTIVE.map((objective, index) => {
             return (
               <div key={index} className=" lg:pl-16 mb-16">
