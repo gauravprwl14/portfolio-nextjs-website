@@ -1,13 +1,6 @@
 import React from "react";
 import { HeroContent } from "@/components/Hero";
-
-const Home = () => {
-  return (
-    <Container>
-      <HeroContent />
-    </Container>
-  );
-};
+import { ProcessContent } from "@/components/Process";
 
 const Container = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -18,6 +11,15 @@ const Container = ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Home = () => {
+  return (
+    <Container>
+      <HeroContent />
+      <ProcessContent></ProcessContent>
+    </Container>
   );
 };
 

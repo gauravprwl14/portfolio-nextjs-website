@@ -1,12 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-  faLinkedin,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+
 import Link from "next/link";
 import { USER_OBJ } from "@/lib/utils";
 
@@ -15,6 +10,7 @@ export const HeroContent = ({}) => {
     <div className="flex flex-col-reverse lg:flex-row lg:justify-normal lg:items-stretch  justify-center items-center  h-full mx-auto px-4 lg:px-10 max-w-screen-2xl ">
       {/* <div className="flex flex-row h-full mx-auto px-10 max-w-screen-2xl"> */}
       <div className="section-1 w-full flex items-center justify-center">
+        {/* Personnel Information */}
         <div className="pr-5 p-2 flex flex-col items-center lg:items-start ">
           <div className="hidden lg:flex lg:text-2xl font-semibold mb-5">
             <h3>Welcome to my portfolio</h3>
@@ -35,6 +31,7 @@ export const HeroContent = ({}) => {
             <h3>{USER_OBJ.description}</h3>
           </div>
 
+          {/* CTA button -> About Us section */}
           <div className="cta-section px-2 my-10 flex w-full relative">
             <div>
               <Button
@@ -56,14 +53,16 @@ export const HeroContent = ({}) => {
               })}
             </div>
           </div>
-
-          <div className="mouse-container absolute bottom-4 w-full left-2/4">
+          {/* mouse section */}
+          <div className="mouse-container absolute bottom-4  left-2/4">
             <h3 className="">
               <img src={"/img/slider/mouse.svg"} alt="image" />
             </h3>
           </div>
         </div>
       </div>
+
+      {/* Avatar section */}
 
       <div className="section-2 w-60 lg:mb-10 lg:h-full lg:w-full flex items-center flex-col justify-center max-w-2xl">
         <div className="avatar-container">

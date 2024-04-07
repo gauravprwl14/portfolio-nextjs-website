@@ -30,11 +30,13 @@ const Header = ({ logo }) => {
   return (
     <header>
       {/* bg-white */}
-      <nav className="px-8 py-6  fixed top-0 left-0 right-0 z-30">
+      <nav className="px-2 lg:px-8 py-2 lg:py-6  fixed top-0 left-0 right-0 z-30 bg-white lg:bg-transparent">
         {/* container */}
         <div className="w-full mx-auto h-auto py-0 px-10 relative clear-both max-w-screen-2xl">
           <div className="flex items-center justify-between">
-            <div className="flex items-center">Logo</div>
+            <div className="flex">
+              <img src={"/img/logo.svg"}></img>
+            </div>
 
             <div className="hidden lg:flex items-center w-auto justify-center">
               <div className="flex">
