@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const jostFont = Jost({ subsets: ["latin"] });
+const jostFont = Jost({ subsets: ["latin"], variable: "--font-jost" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="m-0">
+      <body className={`m-0 ${jostFont.variable}`}>
         {/* <div className="flex flex-1 flex-col w-full h-full clear-both float-left relative"> */}
         <div className="flex flex-col w-full h-full">
           <Header></Header>

@@ -35,6 +35,15 @@ export const USER_OBJ = {
   ],
 };
 
+export const ABOUT_US = {
+  "skill": "Designer",
+  "title": "I Can Design Anything You Want",
+  "bio": "Hello there! I'm a fullstack developer, and I'm very passionate and dedicated to my work. With 8 years experience as a professional web / mobile developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the development process, from ideation to discussion and collaboration.",
+  "totalProjectInThousand": "9",
+  "experience": 8,
+  email: "porwalgaurav14@gmail.com"
+}
+
 
 export const PROCESS_OBJECTIVE = [
   {

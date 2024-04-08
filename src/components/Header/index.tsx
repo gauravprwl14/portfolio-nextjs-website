@@ -25,7 +25,7 @@ const menuItems = [
   },
 ];
 
-const Header = ({ logo }) => {
+const Header = ({}) => {
   const [toggle, setToggle] = useState(false);
   return (
     <header>

@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroContent } from "@/components/Hero";
 import { ProcessContent } from "@/components/Process";
+import { AboutUs } from "@/components/About";
 
 const Container = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -18,7 +19,10 @@ const Home = () => {
   return (
     <Container>
       <HeroContent />
+
       <ProcessContent></ProcessContent>
+
+      <AboutUs></AboutUs>
     </Container>
   );
 };
