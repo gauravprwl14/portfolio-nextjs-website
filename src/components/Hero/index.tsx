@@ -3,14 +3,25 @@ import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Link from "next/link";
-import { USER_OBJ } from "@/lib/utils";
+import { SocialLink, USER_OBJ } from "@/lib/utils";
+
+const SocialLinks = ({ social }: { social: SocialLink[] }) => (
+  <div className="flex flex-row flex-1  items-center ml-4">
+    {social.map((socialObj, index) => (
+      <div key={index} className=" w-4 h-4 mx-2">
+        <Link href={socialObj.url} target="_blank">
+          <FontAwesomeIcon icon={socialObj.icon}></FontAwesomeIcon>
+        </Link>
+      </div>
+    ))}
+  </div>
+);
 
 export const HeroContent = ({}) => {
   return (
     <div className="flex flex-col-reverse lg:flex-row lg:justify-normal lg:items-stretch  justify-center items-center  h-full mx-auto px-4 lg:px-10 max-w-screen-2xl ">
-      {/* <div className="flex flex-row h-full mx-auto px-10 max-w-screen-2xl"> */}
+      {/* Personnel Information */}
       <div className="section-1 w-full flex items-center justify-center">
-        {/* Personnel Information */}
         <div className="pr-5 p-2 flex flex-col items-center lg:items-start ">
           <div className="hidden lg:flex lg:text-2xl font-semibold mb-5">
             <h3>Welcome to my portfolio</h3>
@@ -41,7 +52,9 @@ export const HeroContent = ({}) => {
                 About me
               </Button>
             </div>
-            <div className="flex flex-row flex-1  items-center ml-4">
+            {/* Social Links */}
+            <SocialLinks social={USER_OBJ.social} />
+            {/* <div className="flex flex-row flex-1  items-center ml-4">
               {USER_OBJ.social.map((socialObj, index) => {
                 return (
                   <div key={index} className=" w-4 h-4 mx-2">
@@ -51,10 +64,10 @@ export const HeroContent = ({}) => {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
           {/* mouse section */}
-          <div className="mouse-container absolute bottom-4  left-2/4">
+          <div className="mouse-container absolute bottom-4 left-2/4">
             <h3 className="">
               <img src={"/img/slider/mouse.svg"} alt="image" />
             </h3>
