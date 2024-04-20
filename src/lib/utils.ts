@@ -6,6 +6,8 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { describe } from "node:test";
+import { AboutUs, UserObject } from "./types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -13,11 +15,14 @@ export function cn(...inputs: ClassValue[]) {
 
 
 
-export const USER_OBJ = {
+
+export const USER_OBJ: UserObject = {
   name: "Gaurav Porwal",
   designation: "Fullstack Developer",
+  // description:
+  //   "Collaborating with highly skilled individuals, our agency delivers top-quality services.",
   description:
-    "Collaborating with highly skilled individuals, our agency delivers top-quality services.",
+    "As a senior technical leader, with proven history of successfully delivering top-quality cloud-native software projects, digital transformations, and comprehensive cloud solutions.",
   img: "/img/slider/avatar.png",
   social: [
     {
@@ -35,14 +40,138 @@ export const USER_OBJ = {
   ],
 };
 
-export const ABOUT_US = {
-  "skill": "Designer",
-  "title": "I Can Design Anything You Want",
-  "bio": "Hello there! I'm a fullstack developer, and I'm very passionate and dedicated to my work. With 8 years experience as a professional web / mobile developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the development process, from ideation to discussion and collaboration.",
-  "totalProjectInThousand": "9",
-  "experience": 8,
-  email: "porwalgaurav14@gmail.com"
-}
+export const ABOUT_US: AboutUs = {
+  skill: "Designer",
+  title: "I Can Design Anything You Want",
+  // bio2: {
+  //   "paragraphs": [
+  //     {
+  //       "text": [
+  //         { "content": "Hello there! I am a ", "highlight": false },
+  //         { "content": "Full Stack Developer", "highlight": true },
+  //         { "content": " and ", "highlight": false },
+  //         { "content": "senior technical leader", "highlight": true },
+  //         { "content": " with over 8 years of experience in creating ", "highlight": false },
+  //         { "content": "high-quality, cloud-native software solutions", "highlight": true },
+  //         { "content": ". My expertise spans the full spectrum of ", "highlight": false },
+  //         { "content": "web and mobile development", "highlight": true },
+  //         { "content": ", leveraging ", "highlight": false },
+  //         { "content": "modern technologies", "highlight": true },
+  //         { "content": " like ", "highlight": false },
+  //         { "content": "Next.js, React Native, Flutter, and Node.js", "highlight": true },
+  //         { "content": " to deliver ", "highlight": false },
+  //         { "content": "scalable", "highlight": true },
+  //         { "content": " and ", "highlight": false },
+  //         { "content": "efficient applications", "highlight": true },
+  //         { "content": ". Known for my ", "highlight": false },
+  //         { "content": "strategic approach to digital transformation", "highlight": true },
+  //         { "content": " and a ", "highlight": false },
+  //         { "content": "passion for UI and animation challenges", "highlight": true },
+  //         { "content": ", I lead teams that ", "highlight": false },
+  //         { "content": "innovate", "highlight": true },
+  //         { "content": " and ", "highlight": false },
+  //         { "content": "excel", "highlight": true },
+  //         { "content": " in every project phase. I am ", "highlight": false },
+  //         { "content": "driven", "highlight": true },
+  //         { "content": " to build ", "highlight": false },
+  //         { "content": "beautiful software", "highlight": true },
+  //         { "content": " that not only meets but ", "highlight": false },
+  //         { "content": "exceeds user expectations", "highlight": true },
+  //         { "content": ", consistently delivering ", "highlight": false },
+  //         { "content": "transformative results", "highlight": true },
+  //         { "content": " for businesses.", "highlight": false }
+  //       ]
+  //     }
+  //   ]
+  // },
+
+  // bio:
+  //   "Hello there! I am a Full Stack Developer and senior technical leader with over 8 years of experience in creating high-quality, cloud-native software solutions. My expertise spans the full spectrum of web and mobile development, leveraging modern technologies like Next.js, React Native, Flutter, and Node.js to deliver scalable and efficient applications. Known for my strategic approach to digital transformation and a passion for UI and animation challenges, I lead teams that innovate and excel in every project phase. I am driven to build beautiful software that not only meets but exceeds user expectations, consistently delivering transformative results for businesses.",
+  bio: {
+    "paragraphs": [
+      {
+        "text": [
+          { "content": "Hello there! I am a ", "highlight": false },
+          { "content": "Full Stack Developer", "highlight": true },
+          { "content": " and ", "highlight": false },
+          { "content": "senior technical leader", "highlight": true },
+          { "content": " with over 8 years of experience in creating ", "highlight": false },
+          { "content": "high-quality, cloud-native software solutions", "highlight": true },
+          { "content": ".", "highlight": false }
+        ]
+      },
+      {
+        "text": [
+          { "content": "My expertise spans the full spectrum of ", "highlight": false },
+          { "content": "web and mobile development", "highlight": true },
+          { "content": ", leveraging ", "highlight": false },
+          { "content": "modern technologies", "highlight": true },
+          { "content": " like ", "highlight": false },
+          { "content": "Next.js, React Native, Flutter, and Node.js", "highlight": true },
+          { "content": " to deliver ", "highlight": false },
+          { "content": "scalable", "highlight": true },
+          { "content": " and ", "highlight": false },
+          { "content": "efficient applications", "highlight": true },
+          { "content": ".", "highlight": false }
+        ]
+      },
+      {
+        "text": [
+          { "content": "Known for my ", "highlight": false },
+          { "content": "strategic approach to digital transformation", "highlight": true },
+          { "content": " and a ", "highlight": false },
+          { "content": "passion for UI and animation challenges", "highlight": true },
+          { "content": ", I lead teams that ", "highlight": false },
+          { "content": "innovate", "highlight": true },
+          { "content": " and ", "highlight": false },
+          { "content": "excel", "highlight": true },
+          { "content": " in every project phase.", "highlight": false }
+        ]
+      },
+      {
+        "text": [
+          { "content": "I am ", "highlight": false },
+          { "content": "driven", "highlight": true },
+          { "content": " to build ", "highlight": false },
+          { "content": "beautiful software", "highlight": true },
+          { "content": " that not only meets but ", "highlight": false },
+          { "content": "exceeds user expectations", "highlight": true },
+          { "content": ", consistently delivering ", "highlight": false },
+          { "content": "transformative results", "highlight": true },
+          { "content": " for businesses.", "highlight": false }
+        ]
+      }
+    ]
+  },
+  totalProjectInThousand: "9",
+  experience: 8,
+  email: "porwalgaurav14@gmail.com",
+  skills: [
+    {
+      title: "Web and Mobile App Development",
+      icon: "/img/skills/webapp.svg",
+      description: "Unleash the full potential of your business with web and mobile app app. Experienced in modern technologies like Nextjs, React Native and Flutter.",
+    },
+    {
+      title: "FullStack App Development",
+      icon: "/img/skills/fullstack-design.svg",
+      description: "Design and build cloud native backend services by implementing solutions using NodeJS, PostgreSQL, Redis, Docker and K8. I assure you an end-to-end product for your unique needs.",
+    },
+    {
+      title: "Architecture & Infrastructure",
+      // icon: "/img/skills/fullstack-design.svg",
+      icon: "/img/skills/architecture-infrastructure-icon.svg",
+      description: "Design and lead cloud solution implementations that solve strategic challenges and increase performance, reliability, availability, and scalability.",
+    },
+    // {
+    //   title: "UI Design",
+    //   icon: "/img/skills/graphic-design.svg",
+    //   description: "Unique designs for your product, guaranteed to be user-centric and a visual treat!",
+    // },
+  ],
+};
+
+
 
 
 export const PROCESS_OBJECTIVE = [
