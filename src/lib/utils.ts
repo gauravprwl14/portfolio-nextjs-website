@@ -204,3 +204,27 @@ export const PROCESS_OBJECTIVE = [
   }
 ]
 
+
+
+export const PORTFOLIO = {
+  items: [
+    {
+      title: "Project 1",
+      description: "This is the first project in my portfolio.",
+      url: "/img/portfolio/project-1.png",
+      link: "https://example.com/project1"
+    },
+    {
+      title: "Project 2",
+      description: "This is the second project in my portfolio.",
+      url: "/img/portfolio/project-2.png",
+      link: "https://example.com/project2"
+    },
+    {
+      title: "Project 3",
+      description: "This is the third project in my portfolio.",
+      url: "/img/portfolio/project-3.png",
+      link: "https://example.com/project3"
+    }
+  ]
+}

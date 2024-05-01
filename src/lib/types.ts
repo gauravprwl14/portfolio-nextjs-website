@@ -35,3 +35,15 @@ export interface Skill {
     icon: string;
     description: string;
 }
+
+
+export type PortfolioItem = {
+    title: string;
+    description: string;
+    url: string;
+    link: string;
+};
+
+export type Portfolio = {
+    items: PortfolioItem[];
+};

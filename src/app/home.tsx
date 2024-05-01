@@ -2,6 +2,7 @@ import React from "react";
 import { HeroContent } from "@/components/Hero";
 import { ProcessContent } from "@/components/Process";
 import { AboutUs } from "@/components/About";
+import Portfolio from "@/components/Portfolio";
 
 const Container = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <ProcessContent></ProcessContent>
 
       <AboutUs></AboutUs>
+      <Portfolio></Portfolio>
     </Container>
   );
 };
