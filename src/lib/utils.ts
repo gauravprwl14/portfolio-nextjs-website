@@ -6,8 +6,13 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faGlobe
+} from "@fortawesome/free-solid-svg-icons";
 import { describe } from "node:test";
 import { AboutUs, UserObject } from "./types";
+import { metadata } from "@/app/layout";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -210,21 +215,133 @@ export const PORTFOLIO = {
   items: [
     {
       title: "Project 1",
-      description: "This is the first project in my portfolio.",
+      description: "admasdn njadksna  dlasldak  ajkdnaskjd kajshdkasjhd a dalksdlasmd highlight with some color dasdhasd adhashdkajsdakshdkashdikashjkdhak dnadausidhiaus",
       url: "/img/portfolio/project-1.png",
-      link: "https://example.com/project1"
+      link: "https://example.com/project1",
+      techStack: [
+        {
+          icon: "icon1.png",
+          title: "Tech 1"
+        },
+        {
+          icon: "icon2.png",
+          title: "Tech 2"
+        }
+      ],
+      tags: [{ label: "tag1" }, { label: "tag2" }],
+      metaData: {
+        links: [
+          {
+            title: "Github",
+            url: "",
+            icon: faGithub
+          },
+          {
+            title: "Website",
+            url: "",
+            icon: faGlobe
+          },
+        ]
+      }
     },
     {
       title: "Project 2",
       description: "This is the second project in my portfolio.",
       url: "/img/portfolio/project-2.png",
-      link: "https://example.com/project2"
+      link: "https://example.com/project2",
+      techStack: [
+        {
+          category: "Frontend",
+          icon: "icon1.png",
+          title: "Tech 1"
+        },
+        {
+          category: "Frontend",
+          icon: "icon2.png",
+          title: "Tech 2"
+        }
+      ],
+      tags: [{ label: "tag1" }, { label: "tag2" }],
+      metaData: {
+        links: [
+          {
+            title: "Github",
+            url: "",
+            icon: faGithub
+          },
+          {
+            title: "Website",
+            url: "",
+            icon: faGlobe
+          },
+        ]
+      }
     },
     {
       title: "Project 3",
       description: "This is the third project in my portfolio.",
       url: "/img/portfolio/project-3.png",
-      link: "https://example.com/project3"
+      link: "https://example.com/project3",
+      techStack: [
+        {
+          category: "Frontend",
+          icon: "icon1.png",
+          title: "Tech 1"
+        },
+        {
+          category: "Frontend",
+          icon: "icon2.png",
+          title: "Tech 2"
+        }
+      ],
+      tags: [{ label: "tag1" }, { label: "tag2" }],
+      metaData: {
+        links: [
+          {
+            title: "Github",
+            url: "",
+            icon: faGithub
+          },
+          {
+            title: "Website",
+            url: "",
+            icon: faGlobe
+          },
+        ]
+      }
+    },
+    {
+      title: "Project 4",
+      description: "This is the third project in my portfolio.",
+      url: "/img/portfolio/project-3.png",
+      link: "https://example.com/project3",
+      techStack: [
+        {
+          category: "Frontend",
+          icon: "icon1.png",
+          title: "Tech 1"
+        },
+        {
+          category: "Frontend",
+          icon: "icon2.png",
+          title: "Tech 2"
+        }
+      ],
+      tags: [{ label: "tag1" }, { label: "tag2" }],
+      metaData: {
+        links: [
+          {
+            title: "Github",
+            url: "",
+            icon: faGithub
+          },
+          {
+            title: "Website",
+            url: "",
+            icon: faGlobe
+          },
+        ]
+      }
     }
   ]
 }
