@@ -8,16 +8,16 @@ import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 export const Portfolio = () => {
   console.log(PORTFOLIO);
   return (
-    <div className="process-section h-auto w-full float-left clear-both mx-auto px-4 lg:px-10">
+    <div className="process-section h-auto w-full float-left clear-both mx-auto px-4 py-2 lg:px-10">
       <div className="portfolio-section w-full h-auto float-left clear-both">
-        <div className="portfolio-content w-full h-auto float-left clear-both">
+        <div className="portfolio-content w-full h-auto float-left clear-both ">
           <div className="portfolio-title w-full h-auto float-left clear-both">
             <h2 className="text-3xl font-bold text-center text-gray-800">
               Portfolio
             </h2>
           </div>
 
-          <div className="portfolio-list w-full h-auto float-left clear-both grid grid-cols-3 gap-4 p-3 m-b-3 rounded-3xl justify-between">
+          <div className="portfolio-list w-full h-auto float-left clear-both grid grid-cols-1 lg:grid-cols-3 gap-4 p-3 m-b-3 rounded-3xl justify-between">
             {PORTFOLIO.items.map((item, index) => {
               return <PortfolioItem {...item} key={index}></PortfolioItem>;
             })}
@@ -100,7 +100,7 @@ const IconList = ({ links }) => {
           <span>See Details </span>
           <FontAwesomeIcon
             icon={faArrowCircleRight}
-            className="text-blue-600 text-2xl ml-2 max-w-8"
+            className="text-blue-600 max-w-6  lg:text-2xl ml-2 lg:max-w-8"
           />
         </button>
       </div>

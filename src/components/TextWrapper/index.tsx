@@ -43,9 +43,9 @@ export const TextWrapper: React.FC<TextWrapperProps> = ({
           {text}
         </p>
         {!isExpanded && isTruncatable && (
-          <div className="absolute bottom-0 right-0 bg-white px-2 py-1">
+          <div className="absolute bottom-0 right-0 px-2 py-0 z-10">
             <button
-              className="text-blue-500 hover:text-blue-700"
+              className="text-blue-500 hover:text-blue-700 text-xs"
               onClick={toggleExpand}
             >
               Show more
@@ -55,7 +55,7 @@ export const TextWrapper: React.FC<TextWrapperProps> = ({
       </div>
       {isExpanded && (
         <button
-          className="text-blue-500 hover:text-blue-700"
+          className="text-blue-500 hover:text-blue-700 text-xs z-10"
           onClick={toggleExpand}
         >
           Show less
