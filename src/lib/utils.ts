@@ -8,11 +8,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
-  faGlobe
+  faGlobe,
+  faEnvelope,
+  faPhone,
+  faLocation
 } from "@fortawesome/free-solid-svg-icons";
-import { describe } from "node:test";
 import { AboutUs, UserObject } from "./types";
-import { metadata } from "@/app/layout";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -24,6 +25,23 @@ export function cn(...inputs: ClassValue[]) {
 export const USER_OBJ: UserObject = {
   name: "Gaurav Porwal",
   designation: "Fullstack Developer",
+
+  address: {
+    icon: faLocation,
+    city: "Bangalore",
+    country: "India",
+  },
+  email: {
+    icon: faEnvelope,
+
+    email: "porwalgaurav14@gmail.com"
+  },
+  phone: {
+    icon: faPhone,
+    code: "+91",
+    number: "9066641535",
+  },
+
   // description:
   //   "Collaborating with highly skilled individuals, our agency delivers top-quality services.",
   description:

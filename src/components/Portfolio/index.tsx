@@ -11,11 +11,15 @@ export const Portfolio = () => {
     <div className="process-section h-auto w-full float-left clear-both mx-auto px-4 py-2 lg:px-10">
       <div className="portfolio-section w-full h-auto float-left clear-both">
         <div className="portfolio-content w-full h-auto float-left clear-both ">
-          <div className="portfolio-title w-full h-auto float-left clear-both">
-            <h2 className="text-3xl font-bold text-center text-gray-800">
-              Portfolio
-            </h2>
+          {/* Create new component for the portfolio title sections  */}
+
+          <div className="flex w-full justify-center items-center">
+            <PortfolioTitle></PortfolioTitle>
           </div>
+
+          {/* <h2 className="text-3xl font-bold text-center text-gray-800">
+              Portfolio
+            </h2> */}
 
           <div className="portfolio-list w-full h-auto float-left clear-both grid grid-cols-1 lg:grid-cols-3 gap-4 p-3 m-b-3 rounded-3xl justify-between">
             {PORTFOLIO.items.map((item, index) => {
@@ -27,6 +31,30 @@ export const Portfolio = () => {
     </div>
   );
 };
+
+const PortfolioTitle = () => {
+  return (
+    <div className="flex flex-1 w-full justify-center items-center my-5 px-5 text-center max-w-screen-sm lg:max-w-screen-lg">
+      <div className="">
+        <div className="relative text-2xl lg:text-4xl py-2 mb-6">
+          <div className="">
+            <p className=" text-blue-600 font-bold font-jost py-2">Portfolio</p>
+            <p className="py-2">My Amazing Works</p>
+          </div>
+          <div className="bg-black h-1 absolute bottom-0 lg:-bottom-2 left-1/2 transform -translate-x-1/2 w-1/2 rounded-md"></div>
+        </div>
+        <div className="">
+          <p>
+            Leveraging my expertise as a tech leader, I specialize in creating
+            websites and mobile apps using both responsive and adaptive design
+            methods, ensuring seamless user experiences across all devices
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const PortfolioItem = ({
   title,
   url,

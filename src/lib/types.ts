@@ -10,6 +10,17 @@ export interface UserObject {
     description: string;
     img: string;
     social: SocialLink[];
+    address: {
+        icon: any;
+        city: string;
+        country: string;
+    };
+    email: { icon: any; email: string; };
+    phone: {
+        icon: any;
+        code: string;
+        number: string;
+    };
 }
 
 
