@@ -363,3 +363,113 @@ export const PORTFOLIO = {
     }
   ]
 }
+
+
+export const CONTACT_FORM = {
+  "formTitle": "Contact Us",
+  "submitText": "Send Message",
+  "rows": [
+    {
+      "columns": [
+        {
+          "fields": [
+            {
+              "name": "firstName",
+              "type": "text",
+              "label": "First Name",
+              "placeholder": "Your First Name",
+              "required": true,
+              "width": "1/2" // 50% of the container width
+            },
+            {
+              "name": "lastName",
+              "type": "text",
+              "label": "Last Name",
+              "placeholder": "Your Last Name",
+              "required": true,
+              "width": "1/2" // 50% of the container width
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "fields": [
+            {
+              "name": "subject",
+              "type": "text",
+              "label": "Subject",
+              "placeholder": "Subject of your message",
+              "required": true,
+              "width": "full" // 100% of the container width
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "columns": [
+        {
+          "fields": [
+            {
+              "name": "description",
+              "type": "textarea",
+              "label": "Description",
+              "placeholder": "Message Description",
+              "required": true,
+              "width": "full" // 100% of the container width
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+
+
+
+export const CONTACT_FORM_2 = {
+  "formTitle": "Contact Us",
+  "submitText": "Send Message",
+  "fields": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "placeholder": "Your Name",
+      "required": true
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "label": "Email",
+      "placeholder": "Your Email",
+      "required": true,
+      "validation": {
+        "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "name": "phone",
+      "type": "tel",
+      "label": "Phone Number",
+      "placeholder": "Your Phone Number",
+      "required": false,
+      "validation": {
+        "regex": "^\\+?[0-9]{7,15}$",
+        "message": "Please enter a valid phone number"
+      }
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "placeholder": "Your Message",
+      "required": true
+    }
+  ]
+}
